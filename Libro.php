@@ -14,7 +14,7 @@ function __construct($autore, $titolo, $annoPubblicazione) {
 
 
 public function contaLibri() {
-parent::restituisci();
+parent::$contatoreMateriali++;
 
 }
 

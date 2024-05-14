@@ -14,7 +14,7 @@ class DvD extends MaterialeBibliotecario {
     
     
     public function contaDvd() {
-    parent::restituisci();
+    parent::$contatoreMateriali++;
     
     }
     
