@@ -5,17 +5,20 @@ include_once __DIR__ . "/MaterialeBibliotecario.php";
 class Libro extends MaterialeBibliotecario {
 
 public $autore;
-public static $contaLibri;
+static protected $contatoreMateriali =0;
+
 
 function __construct($autore, $titolo, $annoPubblicazione) {
     $this->autore = $autore;
-    $this->titolo = $titolo;
-    $this->annoPubblicazione = $annoPubblicazione;
+    // $this->titolo = $titolo;
+    // $this->annoPubblicazione = $annoPubblicazione;
+    parent::__construct($titolo, $annoPubblicazione);
+    self::$contatoreMateriali++;
 }
 
 
-public function contaLibri() {
-self::$contaLibri++;
+static public function contaLibri() {
+    return self::$contatoreMateriali;
 
 }
 

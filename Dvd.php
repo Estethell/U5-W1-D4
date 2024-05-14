@@ -5,20 +5,21 @@ include_once __DIR__ . "/MaterialeBibliotecario.php";
 class DvD extends MaterialeBibliotecario {
 
     public $regista;
-    public static $contaDvd;
+
+    static protected $contatoreMateriali =0;
     
     function __construct($regista, $titolo, $annoPubblicazione) {
         $this->regista = $regista;
-        $this->titolo = $titolo;
-        $this->annoPubblicazione = $annoPubblicazione;
+        // $this->titolo = $titolo;
+        // $this->annoPubblicazione = $annoPubblicazione;
+        parent::__construct($titolo, $annoPubblicazione);
+        self::$contatoreMateriali++;
     }
     
     
-    public function contaDvd() {
-        self::$contaDvd++;
+    static public function contaDvd() {
+    return self::$contatoreMateriali;
     
     }
     
-    
-    
-    }
+   }
