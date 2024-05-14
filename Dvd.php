@@ -4,10 +4,10 @@ include_once __DIR__ . "/MaterialeBibliotecario.php";
 
 class DvD extends MaterialeBibliotecario {
 
-    public $autore;
+    public $regista;
     
-    function __construct($autore, $titolo, $annoPubblicazione) {
-        $this->autore = $autore;
+    function __construct($regista, $titolo, $annoPubblicazione) {
+        $this->regista = $regista;
         $this->titolo = $titolo;
         $this->annoPubblicazione = $annoPubblicazione;
     }
