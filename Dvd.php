@@ -5,6 +5,7 @@ include_once __DIR__ . "/MaterialeBibliotecario.php";
 class DvD extends MaterialeBibliotecario {
 
     public $regista;
+    public static $contaDvd;
     
     function __construct($regista, $titolo, $annoPubblicazione) {
         $this->regista = $regista;
@@ -14,7 +15,7 @@ class DvD extends MaterialeBibliotecario {
     
     
     public function contaDvd() {
-    parent::$contatoreMateriali++;
+        self::$contaDvd++;
     
     }
     

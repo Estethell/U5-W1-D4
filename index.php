@@ -14,4 +14,5 @@ echo $newBook->annoPubblicazione;
 echo $newBook->contaLibri();
 echo $newDvd->contaDvd();
 
-echo MaterialeBibliotecario::$contatoreMateriali;
+echo Libro::$contaLibri;
+echo Dvd::$contaDvd;
